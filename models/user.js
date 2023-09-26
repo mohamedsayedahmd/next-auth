@@ -20,5 +20,4 @@ const userSchema = new Schema(
   }
 );
 const User = mongoose.models.User || mongoose.model("User", userSchema);
-// if you have already has this topic (will get it - no need to create a model)
 export default User;
