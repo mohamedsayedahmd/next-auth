@@ -28,3 +28,12 @@ create folder called: lib \
 
 crate new folder with the name models \
 create a schema
+
+---
+
+password hasing
+
+```js
+import bcrypt from "bcryptjs";
+const hashedPassword = await bcrypt.hash(password, 10); // 10 rounds of hashing
+```

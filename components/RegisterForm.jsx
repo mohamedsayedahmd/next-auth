@@ -18,6 +18,21 @@ const RegisterForm = () => {
       return;
     }
     try {
+      const resUserExists = await fetch("api/userExists", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const { user } = await resUserExists.json();
+
+      if (user) {
+        setError("User already exist.");
+        return;
+      } // if the user exist
+
       const res = await fetch("api/register", {
         method: "post",
         headers: { "content-type": "application/json" },
@@ -26,7 +41,7 @@ const RegisterForm = () => {
 
       if (res.ok) {
         const form = e.target;
-        form.rest();
+        form.reset(); // fix the code (rest)
       } else {
         console.log("User registration failed.");
       }
