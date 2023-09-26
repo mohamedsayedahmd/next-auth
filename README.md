@@ -12,3 +12,19 @@
 ---
 
 `npm i next-auth mongoose bcryptjs`
+
+---
+
+.env
+
+- MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.pxnvlhv.mongodb.net/authapp
+
+---
+
+create folder called: lib \
+(connect to mongodb)
+
+---
+
+crate new folder with the name models \
+create a schema
