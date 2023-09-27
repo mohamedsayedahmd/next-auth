@@ -37,3 +37,8 @@ password hasing
 import bcrypt from "bcryptjs";
 const hashedPassword = await bcrypt.hash(password, 10); // 10 rounds of hashing
 ```
+
+---
+
+Create new folder called auth \
+[...nextauth]
